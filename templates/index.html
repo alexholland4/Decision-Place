@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Decision Simplifier - Input Items{% endblock %}
+
+{% block content %}
+<section class="intro-section">
+    <h2>Simplify Your Choices!</h2>
+    <p>
+        Overwhelmed by too many options? The "Paradox of Choice" suggests that while we might believe more choices are better,
+        having too many can actually lead to decision paralysis and dissatisfaction. This tool helps you overcome this
+        by breaking down complex decisions into simple, pairwise comparisons.
+    </p>
+    <p>
+        By choosing between two items at a time, you intuitively build a ranked list of your preferences,
+        reducing cognitive load and leading to more confident decisions.
+    </p>
+    <p>
+        <em>Inspired by research on behavior science and decision-making. Learn more at <a href="https://thedecisionlab.com/reference-guide/economics/the-paradox-of-choice" target="_blank" rel="noopener noreferrer">The Decision Lab</a>.</em>
+    </p>
+</section>
+
+<section class="input-section">
+    <h2>Enter Your Items to Compare</h2>
+    <p>List each item on a new line (best for lists of 3 to 15 items).</p>
+    {% if error %}
+        <p class="error-message">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('index') }}">
+        <textarea name="items" id="items-input" rows="10" placeholder="ex. Deciding order of 'To Do' items:&#x0a;Go for a walk&#x0a;Learn a new skill&#x0a;Start project&#x0a;Grocery shopping&#x0a;Read a book&#x0a;Call brother&#x0a;Respond to emails&#x0a;Make lunch&#x0a;Pay bills">{{ current_items_text }}</textarea>
+        <div class="item-controls">
+            <button type="button" id="add-item-btn" style="display:none;">Add Item</button> <p id="item-count">Items: 0</p>
+        </div>
+        <button type="submit" class="cta-button">Start Comparing</button>
+    </form>
+</section>
+
+<section class="example-use-cases">
+    <h3>Example Use Cases:</h3>
+    <ul>
+        <li>Prioritizing features for an app</li>
+        <li>Deciding which movie to watch next</li>
+        <li>Ranking top project ideas</li>
+        <li>Deciding which cities to travel to</li>
+    </ul>
+</section>
+{% endblock %}

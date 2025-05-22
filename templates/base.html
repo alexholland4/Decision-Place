@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Decision Simplifier{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon_black.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="{{ url_for('index') }}" class="header-link">
+                <img src="{{ url_for('static', filename='img/logo_white.png') }}" alt="Logo" class="header-logo">
+                Decision Place
+            </a>
+        </h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Built by <a href="https://www.linkedin.com/in/alexholland2/" target="_blank" rel="noopener noreferrer" style="color: red;">Alex Holland</a></p>
+        <p>This project is open source. Check it out on <a href="https://github.com/alexholland4" target="_blank" rel="noopener noreferrer" style="color: red;">GitHub 🤓</a></p>
+        <p>&copy; 2025 Decision Simplifier</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

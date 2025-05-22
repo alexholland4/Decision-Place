@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Your Ranked List - Decision Simplifier{% endblock %}
+
+{% block content %}
+<section class="results-section">
+    <h2>Your Ranked List!</h2>
+    <p>Based on your choices, here are your items ranked by preference:</p>
+    
+    {% if ranked_items %}
+    <ol class="ranked-list">
+        {% for item_detail in ranked_items %}
+        <li>
+            <span class="item-name">{{ item_detail.name }}</span>
+            <span class="item-score">(Wins: {{ item_detail.wins }}, Losses: {{ item_detail.losses }})</span>
+        </li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <p>No items were ranked. Something went wrong, or no comparisons were made.</p>
+    {% endif %}
+
+    <div class="action-buttons">
+        <a href="{{ url_for('restart') }}" class="cta-button">Start a New Comparison</a>
+    </div>
+    
+    </section>
+{% endblock %}

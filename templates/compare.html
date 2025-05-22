@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Compare Items - Decision Simplifier{% endblock %}
+
+{% block content %}
+<section class="comparison-section">
+    <h2>Which do you prefer?</h2>
+    <p>Comparison {{ current_pair_num }} of {{ total_pairs }}</p>
+    
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: {{ progress }}%;">
+            {{ progress }}%
+        </div>
+    </div>
+
+    <form method="POST" action="{{ url_for('compare') }}" class="comparison-form">
+        <div class="options-container">
+            <button type="submit" name="winner" value="{{ item1 }}" class="option-button">{{ item1 }}</button>
+            <span class="vs-text">OR</span>
+            <button type="submit" name="winner" value="{{ item2 }}" class="option-button">{{ item2 }}</button>
+        </div>
+    </form>
+    <div class="navigation-controls">
+        <a href="{{ url_for('restart') }}" class="restart-link-ingame">Restart Session</a>
+    </div>
+</section>
+{% endblock %}
