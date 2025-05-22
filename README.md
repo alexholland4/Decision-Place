@@ -1,6 +1,8 @@
 # Decision Place
 
-Overwhelmed by too many options? The "Paradox of Choice" suggests that while we might believe more choices are better, having too many can actually lead to decision paralysis and dissatisfaction. Inspired by research on behavior science and decision-making, this web-based tool that helps users make decisions by presenting pairwise comparisons rather than overwhelming them with too many options at once.
+Overwhelmed by too many options? Make decisions faster and more confidently with Decision Place!
+
+The "Paradox of Choice" suggests that while we might believe more choices are better, having too many can actually lead to decision paralysis and dissatisfaction. Inspired by research on behavior science and decision-making, this web-based tool that helps users make decisions by presenting pairwise comparisons rather than overwhelming them with too many options at once.
 
 Try it out at (https://decision-place.onrender.com/)
 
@@ -22,6 +24,6 @@ This tool implements a pairwise comparison system to help users rank a list of i
 * **Backend**: Python + Flask
 * **Ranking Logic**: Based on win counts from pairwise comparisons.
 
-## Running the Application
+## Try It Yourself!
 
-Try it out at (https://decision-place.onrender.com/)
+Use this project any time at (https://decision-place.onrender.com/)
