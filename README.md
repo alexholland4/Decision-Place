@@ -22,6 +22,6 @@ This tool implements a pairwise comparison system to help users rank a list of i
 * **Backend**: Python + Flask
 * **Ranking Logic**: Based on win counts from pairwise comparisons.
 
-## Running the Application
+## Try It Yourself!
 
-Try it out at (https://decision-place.onrender.com/)
+Use this project any time at (https://decision-place.onrender.com/)
