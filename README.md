@@ -1,6 +1,8 @@
-# Decision Simplifier 🧠
+# Decision Place
 
-A web-based tool that helps users make decisions by presenting pairwise comparisons rather than overwhelming them with too many options at once. Inspired by the Paradox of Choice, the tool helps users rank items (e.g., ideas, priorities, products) by selecting between pairs. The end result is a sorted list based on their preferences — derived intuitively and with reduced cognitive load.
+Overwhelmed by too many options? The "Paradox of Choice" suggests that while we might believe more choices are better, having too many can actually lead to decision paralysis and dissatisfaction. Inspired by research on behavior science and decision-making, this web-based tool that helps users make decisions by presenting pairwise comparisons rather than overwhelming them with too many options at once.
+
+Try it out at (https://decision-place.onrender.com/)
 
 ## Project Overview
 
@@ -9,8 +11,8 @@ This tool implements a pairwise comparison system to help users rank a list of i
 ## Core Features Implemented
 
 * **Intro Section**: Brief summary of the Paradox of Choice.
-* **User Input**: Users can enter 5–15 items.
-* **Pairwise Comparison Engine**: System generates unique pairwise matchups and presents them one at a time.
+* **User Input**: Users enters items (usually 5-15).
+* **Pairwise Comparison Engine**: System dynamically generates unique pairwise matchups and presents them one at a time.
 * **Ranking Result**: Displays the ranked list based on user choices.
 * **Restart**: Option to clear session and start over.
 
@@ -21,7 +23,5 @@ This tool implements a pairwise comparison system to help users rank a list of i
 * **Ranking Logic**: Based on win counts from pairwise comparisons.
 
 ## Running the Application
-1.  Ensure Python and Flask are installed (`pip install Flask`).
-2.  Navigate to the `decision-simplifier` directory.
-3.  Run the Flask application: `python app.py`
-4.  Open your web browser and go to `http://127.0.0.1:5000`.
+
+Try it out at (https://decision-place.onrender.com/)
